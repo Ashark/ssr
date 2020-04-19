@@ -10,7 +10,7 @@ Logging is done with the 'Logger' class. This should become an abstract class, i
 
 The back-end uses a 'push' pipeline design. Classes push their results to the next stage, and the next stage doesn't need to know where these results came from (only where they are supposed to go). This makes it very easy to use the same output class with different input classes. It should also be possible to use the same input class with different output classes by making the output class abstract, but I haven't done this yet because it wasn't needed so far. A push design is a better idea than a pull design in this case, because it makes switching inputs while recording trivial.
 
-The pipeline:
+The pipeline :
 
 +---------------+                            +--------------+
 |   X11Input    |      +--------------+      |              |      +-------+
